@@ -9,10 +9,10 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 
-// Update with your React app's origins
+// Define a regular expression to match any subdomain of netlify.app
 const allowedOrigins = [
   'http://localhost:5173',
-  /^https:\/\/jazzy-kheer-.*\.netlify\.app$/
+  /^https:\/\/.*\.netlify\.app$/
 ];
 
 const corsOptions = {
